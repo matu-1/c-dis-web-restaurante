@@ -1,0 +1,275 @@
+:root{
+  font-size: 16px;
+  font-family: 'Raleway', sans-serif;
+  --color-pri: #252526;
+}
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+html{
+  scroll-behavior: smooth;
+}
+.container{
+  width: 95%;
+  max-width: 1000px;
+  margin: 0 auto;
+}
+/* cabezera */
+header{
+  background-image: linear-gradient(to right, rgb(45, 45, 45, 0.7), rgb(45, 45, 45, 0.7)), url('https://i.blogs.es/9bdf51/kimetsu-no-yaiba-anime-crunchyroll-mexico/1366_2000.jpg') ;
+  background-color: var(--color-pri);
+  background-size: cover;
+  background-attachment: fixed;
+  background-position: center;
+  height: 600px;
+  padding: 20px;
+  position: relative;
+}
+.navbar {
+  width: 100%;
+  text-align: right;
+}
+.navbar a{
+  position: relative;
+  text-decoration: none;
+  color: white;
+  padding: 10px;
+  font-size: 1.3rem;
+  display: inline-block;
+}
+.navbar a:hover{
+  text-decoration: underline;
+}
+.textos{
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  color: white;
+  /* z-index: 3; */
+}
+.textos .nombre {
+  font-weight: normal;
+  font-size: 3rem;
+}
+.textos .nombre span{
+  font-weight: bold;
+  font-size: 3.5rem ;
+}
+.textos h3{
+  font-size: 1.5rem;
+  font-weight: normal;
+  font-style: italic;
+}
+
+/*----------- main --------------*/
+main.main{
+  background-image: url('../images/flower.png');
+  background-color: #f2f2f2;
+}
+
+/* acerca de */
+.acerca-de {
+  margin-bottom: 40px;
+  /* background-color: red; */
+}
+.acerca-de .container{
+  position: relative;
+}
+.acerca-de .container::after{
+  content: '';
+  display: block;
+  clear: both;
+}
+.acerca-de-img{
+  position: absolute;
+  width: 80%;
+  top: -50px;
+  z-index: 1;
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.4);
+}
+.acerca-de-img img{
+  width: 100%;
+  vertical-align: top;
+}
+.acerca-de article{
+  position: relative;
+  width: 50%;
+  background-color: white;
+  padding: 20px;
+  margin-top: 250px;
+  /* top: 250px; */
+  float: right;
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.4);
+  z-index: 2;
+}
+.acerca-de article h3{
+  font-size: 2rem;
+  margin-bottom: 20px;
+}
+.acerca-de article p{
+  margin-bottom: 20px;
+  line-height: 1.5rem;
+}
+
+/* menu */
+.menu {
+  margin-bottom: 40px;
+}
+.menu .titulo{
+  font-size: 2rem;
+  margin-bottom: 20px;
+  text-align: center;
+}
+.menu .menu-container{
+  display: flex;
+  flex-wrap: wrap;
+  border: 1px solid black;
+  outline: 1px solid black;
+  outline-offset: 4px;
+  padding: 10px;
+  margin: 7px;
+}
+.menu-container article{
+  width: 50%;
+  padding: 10px;
+}
+.menu-container .categoria{
+  text-align: center;
+  margin-bottom: 30px;
+  font-size: 1.5rem;
+}
+.menu-container .comida{
+  padding-bottom: 20px;
+  margin-bottom: 20px;
+  border-bottom: 4px dotted black;
+  overflow: hidden;
+}
+.comida .descripcion{
+  color: gray;
+}
+.com-des{
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 15px;
+  font-size: 1.1rem;
+}
+
+/* galeria */
+.galeria{
+  display: flex;
+  flex-wrap: wrap;
+}
+.galeria .foto{
+  width: 25%;
+  height: 250px;
+}
+.galeria .foto img{
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  opacity: 0.7;
+  transition: all 0.3s;
+}
+.galeria .foto img:hover{
+  opacity: 1;
+}
+
+/* ubicacion */
+.ubicacion{
+  background-color: white;
+  padding: 40px 20px;
+}
+.ubicacion .container{
+  display: flex;
+  flex-wrap: wrap;
+}
+.ubicacion h3 {
+  width: 100%;
+  text-align: center;
+  margin-bottom: 40px;
+  font-size: 2rem;
+}
+.ubicacion .direccion{
+  width: 50%;
+}
+.ubicacion .horarios{
+  width: 50%;
+  display: flex;
+  flex-wrap: wrap;
+}
+.horarios h4{
+  width: 100%;
+  text-align: center;
+  margin-bottom: 20px;
+}
+.horarios .entre-semana,
+.horarios .fin-semana {
+  width: 50%;
+  text-align: center;
+}
+
+/* mapa */
+.mapa iframe{
+  width: 100%;
+  max-height: 500px;
+  vertical-align: top;
+}
+
+/* footer */
+footer{
+  background-color: var(--color-pri);
+  padding: 20px;
+}
+footer p{
+  color: white;
+  text-align: center;
+}
+
+
+/* media queries */
+@media (max-width: 992px){
+  .acerca-de article{
+    margin-top: 100px;
+  }
+}
+
+@media (max-width: 576px){
+  .navbar{
+    text-align: center;
+  }
+  header{
+    height: 350px;
+  }
+  .textos .nombre span,
+  .textos .nombre{
+    font-size: 2rem ;
+  }
+  .acerca-de-img{
+    position: relative;
+    width: 100%;
+    /* padding-top: 20px; */
+  }
+  .acerca-de article{
+    width: 100%;
+    margin-top: -50px;
+    transform: translate(0, 0);
+  }
+  .menu-container article{
+    width: 100%;
+  }
+  .galeria .foto{
+    width: 50%;
+  }
+  .ubicacion .direccion,
+  .ubicacion .horarios{
+    width: 100%;
+  }
+  .ubicacion .direccion{
+    margin-bottom: 20px;
+    text-align: center;
+  }
+
+}
+
